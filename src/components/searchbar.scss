@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+$navbar-font: 'News Cycle', sans-serif;
+$body-font: 'Open Sans Condensed', sans-serif;
+$navtext-color: #E65B59;
+$navtext-hover: #BA5E79;
+$primary-color: #240C26;
+$search-card: #E0322F;
+
+.search-text{
+    border-style: none;
+    text-align: center;
+    font: 100% $body-font;
+    color: $navtext-color
+}
+.search-text:hover{
+    color:$navtext-hover;
+    text-decoration: none;
+    cursor: pointer;
+}
+.lupa{
+    width: 2.5em;
+    height: 2.5em;
+    color: $primary-color;
+}
+.lupa:hover{
+    cursor: pointer;
+    color: #411d44;
+}
+.card{
+    background: $navtext-color;
+
+    .card-body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-input{
+        background: $search-card;
+        color: $primary-color;
+        border-style: none;
+        border-bottom: solid $primary-color;
+        width: 60%;
+        font-size: 3em;
+    }
+
+    ::placeholder{
+        color: $primary-color;
+        opacity: .8;
+        font: 100% $body-font;
+    }
+
+    .search-input:focus{
+        outline: none;
+    }
+}

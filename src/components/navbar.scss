@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+$navbar-font: 'News Cycle', sans-serif;
+$navtext-color: #E65B59;
+$navtext-hover: #BA5E79;
+
+.menu-text{
+    color: $navtext-color;
+}

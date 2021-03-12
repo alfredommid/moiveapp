@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ useState } from 'react';
+import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch
+} from "react-router-dom";
+import Routes from './Routes';
 
-function App() {
+
+//Components
+import NavbarComponent from './components/NavbarComponent';
+import Searchbar from './components/Searchbar'
+
+
+export default function App() {
+  const [shows, setShows] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <NavbarComponent />
+        <Searchbar setShows={setShows}/>
+        <Switch>
+            <section>
+              <Routes shows={shows}/>
+            </section>
+          </Switch>
+    </Router>
     </div>
   );
 }
-
-export default App;
