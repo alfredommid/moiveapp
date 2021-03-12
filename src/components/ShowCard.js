@@ -8,7 +8,8 @@ import {
   CardBody
 } from 'reactstrap';
 
-const ShowCard = ({id, image,name}) => {
+const ShowCard = ({id, image,name, summary}) => {
+  console.log(summary);
   return (
       <div className="container">
         <Link to={`shows/${id}`}>
